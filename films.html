@@ -1,0 +1,305 @@
+<meta charset="utf8">
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<style>
+hr {
+    width: 760px;
+}
+.list-head {
+    font-family: Verdana;
+    font-size: 10px;
+    text-align: center;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 760px;
+    height: 650px;
+    margin: 0 auto;
+/*    border: 1px solid #000;*/
+}
+#neopoznannye {
+    height: 650px;
+}
+.list div {
+    font-family: Verdana;
+    font-size: 10px;
+    margin-right: 2px;
+    width: 188px;
+    border-bottom: 1px solid #ddd;
+}
+.list div.mnogorazoviy {
+    background-color: #FF6347;
+    font-weight: bold;
+    padding: 2px;
+    width: 184px;
+}
+.list div.glubokiy_trogatelniy_tyazholiy {
+    background-color: #EE82EE;
+    font-weight: bold;
+    padding: 2px;
+    width: 184px;
+}
+.list div.rasshiryayushiy_granicy {
+    background-color: #20B2AA;
+    font-weight: bold;
+    padding: 2px;
+    width: 184px;
+}
+.list div.dokumentalniy {
+    background-color: #ADD8E6;
+    font-weight: bold;
+    padding: 2px;
+    width: 184px;
+}
+.list div.multiplikacionniy {
+    background-color: #FF6347;
+    font-weight: bold;
+    padding: 2px;
+    width: 184px;
+}
+.list div.horoshiy {
+    background-color: #FFFF00;
+    font-weight: bold;
+    padding: 2px;
+    width: 184px;
+}
+.list div.it {
+    background-color: #AFEEEE;
+    font-weight: bold;
+    padding: 2px;
+    width: 184px;
+}
+.list div.desc {
+    display: none;
+    white-space: pre;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #222;
+    padding: 5px;
+}
+</style>
+
+<script>
+$(function(){
+    $('.list div').click(function(){
+        var desc = $(this).next();
+        if (desc.hasClass('desc')) {
+            desc.toggle();
+            desc.css('top', $(this).position().top + 17);
+            desc.css('left', $(this).position().left);
+            desc.text(desc.text().trim());
+        }
+        return false;
+    });
+});
+</script>
+
+<hr />
+<div class="list-head">Фильмы</div>
+<hr />
+<div class="list">
+    <div class="mnogorazoviy">Многоразовый</div>
+    <div>Влюблён по собственному желанию</div>
+    <div>Москва слезам не верит</div>
+    <div>Любовь и голуби</div>
+    <div>Брат, Брат 2</div>
+    <div>Поймай меня, если сможешь</div>
+    <div>Книжный клуб Джейн Остин</div>
+    <div>Дон Жуан де Марко</div>
+    <div>Американцы</div>
+    <div>Красота по-американски</div>
+    <div>Тутси</div>
+    <div>Король говорит!</div>
+    <div>Зелёная миля</div>
+    <div>Форест Гамп</div>
+    <div>Гладиатор</div>
+    <div>Троя</div>
+    <div>Бойцовский клуб</div>
+    <div>Лицо со шрамом</div>
+    <div>Леон</div>
+    <div>Побег из Шоушенка</div>
+    <div>Одержимость (2004)</div>
+    <div>Город ангелов</div>
+    <div>Дом у озера</div>
+    <div>Лучше не бывает</div>
+    <div>Укрощение строптивого</div>
+    <div>Один день</div>
+    <div>Умница Уилл Хантинг</div>
+    <div>Вики, Кристина, Барселона</div>
+    <div>Bliss (Блаженство)</div>
+    <div>Не смотри вниз</div>
+    <div>Географ глобус пропил</div>
+    <div>Триумф/Величайшая игра всех времён</div>
+    <div>Близость (2004)</div>
+    <div>В бой идут одни "старики"</div>
+    <div>Отступники</div>
+    <div>Залечь на дно в Брюгге (2008)</div>
+    <div>Шоколад (2000)</div>
+    <div>Королевство полной луны (2012)</div>
+    <div>Кто, если не мы</div>
+    <div>Резня / Carnage (2011)</div>
+    <div>Великан (1998)</div>
+    <div>Субмарина (2010)</div>
+    <div>Фантазии Фарятьева (1979)</div>
+    <div>Верность (2019)</div>
+    <div>Гений (2015)</div>
+    <div>Дом странных детей Мисс Перегрин (2016)</div>
+    <div class="glubokiy_trogatelniy_tyazholiy">Глубокий/Трогательный/Тяжёлый</div>
+    <div>Жизнь прекрасна</div>
+    <div>Игры разума</div>
+    <div>Список Шиндлера</div>
+    <div>Страна глухих</div>
+    <div>Всё будет хорошо</div>
+    <div>Ты у меня одна</div>
+    <div>Лицо со шрамом</div>
+    <div>Сотворившая чудо</div>
+    <div>Семь (Se7ven)</div>
+    <div>Shine (Блеск)</div>
+    <div>Остров проклятых</div>
+    <div>Легенды осени</div>
+    <div>Тэмпл Грандин (2010)</div>
+    <div>Честная куртизанка (1998)</div>
+    <div>Храброе сердце (1995)</div>
+    <div>Укрощение огня (1972)</div>
+    <div>Полёты во сне и на яву</div>
+    <div>Беспредел (1989)</div>
+    <div>Пацаны (1983)</div>
+    <div>Девственницы-самоубийцы (1999)</div>
+    <div>Мальчик А (2007)</div>
+    <div>Нация прозака (2001)</div>
+    <div class="rasshiryayushiy_granicy">Расширяющий границы</div>
+    <div>Вечное сияние чистого разума</div>
+    <div>Начало</div>
+    <div>13 этаж</div>
+    <div>Господин Никто</div>
+    <div>Контакт</div>
+    <div>Эффект бабочки</div>
+    <div>Человек с Земли</div>
+    <div>Девятеро (Девятки)</div>
+    <div>Быть Джоном Малковичем (1999)</div>
+    <div>Я - начало</div>
+    <div>Фрэнк (2013)</div>
+    <div>Револьвер</div>
+    <div>Планета Ка-Пэкс</div>
+    <div>Танец Дели</div>
+    <div>Линия жизни. Иван Вырыпаев. Канал Культура</div>
+    <div>Она (2013)</div>
+    <div class="dokumentalniy">Документальный</div>
+    <div>Дом. Свидание с планетой</div>
+    <div>Малыши / Bébé(s) (2010)</div>
+    <div>Путешествие металлиста</div>
+    <div>Независимые игры</div>
+    <div>Ефимов. Лекция для ФСБ</div>
+    <div>Лекции Лапина</div>
+    <div>Я и другие (1971)</div>
+    <div>Великая тайна воды</div>
+    <div>Алкогольный террор против России (В.Г.Жданов)</div>
+    <div>Восстановление зрения (В.Г.Жданов)</div>
+    <div class="multiplikacionniy">Мультипликационный</div>
+    <div>Принцесса Мононокэ</div>
+    <div>Унесенные призраками</div>
+    <div>Сосед Тоторо</div>
+    <div>Пробуждение жизни</div>
+    <div>Тайна аббатства Келлс</div>
+    <div>Валли</div>
+    <div>Жил был пёс</div>
+    <div>Теремок (1995)</div>
+    <div>Серии про домовёнка Кузю</div>
+    <div>Город героев</div>
+    <div class="horoshiy">Хороший (на один раз)</div>
+    <div>Вам письмо</div>
+    <div>Здесь курят</div>
+    <div>Хороший год</div>
+    <div>Лёгкое поведение</div>
+    <div>Пираты карибского моря</div>
+    <div>Звездочка на Земле</div>
+    <div>Бесславные ублюдки</div>
+    <div>Кокаин</div>
+    <div>Аватар</div>
+    <div>Области тьмы</div>
+    <div>Гарри Поттер</div>
+    <div>Престиж</div>
+    <div>Апостол</div>
+    <div>Скала (1996)</div>
+    <div>Мне бы в небо</div>
+    <div>Социальная сеть</div>
+    <div>Заводной апельсин</div>
+    <div>Авиатор</div>
+    <div>Игра</div>
+    <div>Тарас Бульба</div>
+    <div>Далекая страна</div>
+    <div>Титаник</div>
+    <div>Амели</div>
+    <div>Мой парень псих</div>
+    <div>Изыди!</div>
+    <div>Мой придурочный брат</div>
+    <div>Пираты дватцатого века</div>
+    <div>Околофутбола</div>
+    <div>Пикап: Съём без правил</div>
+    <div>Дао Стива</div>
+    <div>Жестокие игры</div>
+    <div>Донни Браско</div>
+    <div>Хешер</div>
+    <div>Питер FM</div>
+    <div>Живой</div>
+    <div>Дом (2011)</div>
+    <div>Интервью с вампиром (1994)</div>
+    <div>Расплата / Payback (1999)</div>
+    <div>Святые из Бундока (1999)</div>
+    <div>Семь лет в тибете (1997)</div>
+    <div>Семейка Джонсонов (2009)</div>
+    <div>Дневник памяти</div>
+    <div>Горько! (2013)</div>
+    <div>Тесты для настоящих мужчин</div>
+    <div>Отель «Гранд Будапешт» (2014)</div>
+    <div>Великий Гэтсби (2013)</div>
+    <div>Человек, который изменил все</div>
+    <div>Триумф: История Рона Кларка (2006)</div>
+    <div>Потерянная комната</div>
+    <div>Тинейджер на миллиард/Миллиардер</div>
+    <div>Моя левая нога</div>
+    <div>Сверстницы</div>
+    <div>Эксперимент (2010)</div>
+    <div>9 рота</div>
+    <div>Петля времени</div>
+    <div>Жан де Флоретт, Манон с источника</div>
+    <div>Кин-дза-дза! (1987)</div>
+    <div>Крепкий мужик (1991)</div>
+    <div>Горькая луна</div>
+    <div>Капитан Фантастик</div>
+    <div>Пьянь (1987)</div>
+    <div>Кококо (2012)</div>
+    <div>Чапаев (1934)</div>
+    <div>Елена (2011)</div>
+    <div>Непрощенный / Unforgiven (1992)</div>
+    <div>Виноваты звёзды (2014)</div>
+    <div>Живёт такой парень (1964)</div>
+    <div>Затерянный в Сибири (1990)</div>
+    <div>Майкл (1996)</div>
+    <div>Дредноуты (Гришковец)</div>
+    <div>Доживём до понедельника (1968)</div>
+    <div>Безумный Макс: Дорога ярости (2015)</div>
+    <div>Свой среди чужих, чужой среди своих</div>
+    <div>С меня хватит! (1992)</div>
+    <div>Однажды в Ирландии (2011)</div>
+    <div>Место встречи (2017)</div>
+    <div>Идеальные незнакомцы (2016)</div>
+    <div>Арахисовый сокол (2019)</div>
+    <div>Беспомощный (2007)</div>
+    <div>Самсара (2001)</div>
+    <div>Фантазии Фарятьева (1979)</div>
+    <div>Звезда (2014)</div>
+    <div>Шпион (2015)</div>
+    <div>Джули и Джулия: Готовим счастье по рецепту (2009)</div>
+    <div>Богемская рапсодия (2018)</div>
+    <div>Джентльмены (2020)</div>
+    <div>План побега (2013)</div>
+    <div>Привычка жениться (1991)</div>
+    <div>Мальчишник в Вегасе (2009)</div>
+    <div>Достать ножи (2019)</div>
+</div>

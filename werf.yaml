@@ -1,0 +1,22 @@
+project: {{ env "appname" }}
+configVersion: 1
+deploy:
+  namespace: {{ env "appname" }}-{{ env "environment" }}
+  namespaceSlug: false
+
+---
+image: {{ env "appname" }}-nginx
+from: nginx:1.19.6-alpine
+git:
+- add: /films.html
+  to: /root/films.html
+  stageDependencies:
+    install:
+      - "**/*"
+    setup:
+      - "**/*"
+ansible:
+  setup:
+  - name: move films
+    shell: |
+      mv /root/films.html /usr/share/nginx/html/index.html
