@@ -16,6 +16,13 @@ spec:
       containers:
       - name: nginx
         {{ tuple (printf "%s-%s" .Chart.Name "nginx") . | werf_container_image }}
+        lifecycle:
+          postStart:
+            exec:
+              command:
+                - "sh"
+                - "-c"
+                - "wget https://raw.githubusercontent.com/zhdanov/films/main/films.html -O /usr/share/nginx/html/index.html"
         ports:
         - containerPort: 80
           name: http
