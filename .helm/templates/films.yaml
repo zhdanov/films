@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        {{ tuple (printf "%s-%s" .Chart.Name "nginx") . | werf_container_image }}
+        {{ tuple (printf "nginx") . | werf_container_image }}
         lifecycle:
           postStart:
             exec:
