@@ -1,7 +1,7 @@
 {{- include "h-statefulset-header" (list $ .) }}
       containers:
       - name: nginx
-        {{ tuple (printf "nginx") . | werf_container_image }}
+        image: {{ .Values.werf.image.nginx }}
         lifecycle:
           postStart:
             exec:
